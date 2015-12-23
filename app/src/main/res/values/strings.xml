@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GitHub API TestApp</string>
+    <string name="enter_language">Enter  programming language:</string>
 </resources>
