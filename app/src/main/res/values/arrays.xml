@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="programming_languages">
+        <item>JavaScript</item>
+        <item>Java</item>
+        <item>Python</item>
+        <item>CSS</item>
+        <item>PHP</item>
+        <item>Ruby</item>
+        <item>C++</item>
+        <item>C</item>
+        <item>Shell</item>
+        <item>C#</item>
+        <item>Objective-C</item>
+        <item>R</item>
+        <item>VimL</item>
+        <item>Go</item>
+        <item>Perl</item>
+        <item>CoffeeScript</item>
+        <item>TeX</item>
+        <item>Swift</item>
+        <item>Scala</item>
+        <item>Emacs Lisp</item>
+        <item>Haskell</item>
+        <item>Lua</item>
+        <item>Clojure</item>
+        <item>Matlab</item>
+        <item>Arduino</item>
+        <item>Groovy</item>
+        <item>Puppet</item>
+        <item>Rust</item>
+        <item>PowerShell</item>
+        <item>Erlang</item>
+        <item>Visual Basic</item>
+        <item>Processing</item>
+        <item>Assembly</item>
+        <item>TypeScript</item>
+        <item>XSLT</item>
+        <item>ActionScript</item>
+        <item>ASP</item>
+        <item>OCaml</item>
+        <item>D</item>
+        <item>Scheme</item>
+        <item>Dart</item>
+        <item>Common Lisp</item>
+        <item>Julia</item>
+        <item>F#</item>
+        <item>Elixir</item>
+        <item>FORTRAN</item>
+        <item>Haxe</item>
+        <item>Racket</item>
+        <item>Logos</item>
+
+    </string-array>
+</resources>

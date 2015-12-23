@@ -16,35 +16,37 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
 
-    <TextView
-        android:id="@+id/hintEnterLangTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:padding="10dp"
-        android:text="@string/enter_language"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/hintEnterLangTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="@string/enter_language"
+            android:textSize="20sp"/>
 
-    <AutoCompleteTextView
-        android:id="@+id/languagesTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hintEnterLangTextView"
-        android:gravity="center_horizontal"
-        android:hint="Java, C, Python..."
-        android:textSize="20sp"/>
+        <AutoCompleteTextView
+            android:id="@+id/languagesTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hintEnterLangTextView"
+            android:gravity="center_horizontal"
+            android:hint="Java, C, Python..."
+            android:maxLines="1"
+            android:textSize="20sp"/>
 
-    <Button
-        android:id="@+id/loadMostPopularRepositoriesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/languagesTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="12dp"
-        android:text="Load repositories"/>
+        <Button
+            android:id="@+id/loadMostPopularRepositoriesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/languagesTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="12dp"
+            android:text="Load repositories"/>
 
     </RelativeLayout>
+
     <ListView
         android:id="@+id/mostPopularReposListView"
         android:layout_width="match_parent"
