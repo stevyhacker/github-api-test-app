@@ -5,7 +5,7 @@ package com.microapps.githubapitestapp;
  */
 public class RepoItem {
 
-    String name, description, language, contributors_url, issues_url;
+    String name, description,url, language, contributors_url, issues_url;
 
     public RepoItem() {
 

@@ -1,6 +1,7 @@
 package com.microapps.githubapitestapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -63,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
                         programmingLanguage = programmingLanguage.replace("++", "pp");
                     }
 
+//            contributors        https://api.github.com/repos/elastic/elasticsearch/contributors?q=sort=contributions
+//                 issues   https://api.github.com/repos/elastic/elasticsearch/issues?q=sort=created_at
                     String getMostPopularReposURL = "https://api.github.com/search/repositories?q=language:" + programmingLanguage + "&sort=stars&order=desc";
 
                     WebTask task = new WebTask();
@@ -74,6 +78,22 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        mostPopularReposListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                RepoItem repoItem = repoItems.get(position);
+
+                Intent intent = new Intent(MainActivity.this, RepoActivity.class);
+
+                intent.putExtra("name", repoItem.name);
+                intent.putExtra("description", repoItem.description);
+                intent.putExtra("url", repoItem.url);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
     class WebTask extends AsyncTask<String, Void, String> {
@@ -122,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
                         repo.contributors_url = item.getString("contributors_url");
                         repo.issues_url = item.getString("issues_url");
                         repo.language = item.getString("language");
+                        repo.url = item.getString("url");
 
                         repoItems.add(repo);
 
